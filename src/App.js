@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+import AddTask from "./components/AddTask/AddTask";
+import Task from "./components/Task/Task";
+// reactEasyState
+import { view } from "@risingstack/react-easy-state";
+// SCSS FILE
+import "./App.scss";
+import { Component } from "react";
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div style={{ width: "50%", margin: "auto" }}>
+          <h1
+            style={{
+              textAlign: "center",
+              fontSize: "3rem",
+              fontWeight: "bold",
+            }}
+            className="display-1"
+          >
+            To-Do List
+          </h1>
+          <AddTask />
+          <Task />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default view(App);

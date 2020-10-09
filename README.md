@@ -1,3 +1,6 @@
+## About
+Simple to-do list app made with React and react-easy-state. Planning to add backend soon. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
